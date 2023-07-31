@@ -4,12 +4,14 @@ from gpiozero import LED, Button
 leds = [LED(18),LED(21),LED(24)]
 switch = Button(25)
 
+
+#Status of the button in the system
 def switch_status():
   if switch.is_pressed:
     return 'Wcisniety'
   else:
     return 'Niewcisniety'
-
+#Tworzenie przycisków dla LEDow
 def html_for_led(led_number):
   i = str(led_number)
   result = "<input type='button' onClick='changed(" + i +)' value='LED" + i + "'/>
