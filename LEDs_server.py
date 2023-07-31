@@ -18,7 +18,7 @@ def html_for_led(led_number):
   return result
 @route('/')
 @route('/<led_number>')
-def index(led_number != "n"):
+def index(led_number="n"):
   if led_number != "n":
     leds[int(led_number).toggle()]
     response = "<script>"
